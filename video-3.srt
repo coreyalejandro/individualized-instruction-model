@@ -1,0 +1,19 @@
+1
+00:00:00,000 --> 00:00:03,000
+This is demo-itis—answers that refuse to freeze.
+
+2
+00:00:03,100 --> 00:00:06,500
+Set temperature to 0. One golden truth test.
+
+3
+00:00:06,600 --> 00:00:10,500
+Docker build, pytest snapshot, CLI trace export green.
+
+4
+00:00:10,600 --> 00:00:14,000
+Push commit. Red badge flips to eternal green.
+
+5
+00:00:14,100 --> 00:00:16,000
+CI now keeps the koan stable forever.

@@ -1,0 +1,19 @@
+1
+00:00:00,000 --> 00:00:03,000
+Languages wrap agents in buzzwords. Re-wrap in crayons.
+
+2
+00:00:03,100 --> 00:00:07,500
+Teacher = prompt & rubric. Student = model executor.
+
+3
+00:00:07,600 --> 00:00:11,500
+Textbook = knowledge base. Classroom = context window.
+
+4
+00:00:11,600 --> 00:00:15,500
+Homework = tool calls. Report card = golden eval.
+
+5
+00:00:15,600 --> 00:00:18,000
+Record 3-sentence explanation—post link below.

@@ -1,0 +1,19 @@
+1
+00:00:00,000 --> 00:00:03,500
+High-school or pro grade? Same code—different DNA.
+
+2
+00:00:03,600 --> 00:00:08,000
+Fill every bullet ≤ 140 chars—lock temperature at zero.
+
+3
+00:00:08,100 --> 00:00:12,000
+Freeze golden fixtures. Publish eval harness badge.
+
+4
+00:00:12,100 --> 00:00:16,000
+Guardrails Markdown. Prompts git-tagged. Traces enabled.
+
+5
+00:00:16,100 --> 00:00:19,000
+Tick checklist → green badge = pro-level.

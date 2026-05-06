@@ -1,0 +1,19 @@
+1
+00:00:00,000 --> 00:00:03,500
+Open 27 tabs and you drown. Open one source and you fly.
+
+2
+00:00:03,600 --> 00:00:08,000
+Step one: zero Google mid-lesson. Unknowns go straight into SST.md
+
+3
+00:00:08,100 --> 00:00:11,000
+Step two: every Friday reconcile with the PDF here.
+
+4
+00:00:11,100 --> 00:00:14,500
+Activity: add ONE unknown now, commit and tag.
+
+5
+00:00:14,600 --> 00:00:17,000
+Depth over breadth. One book. Done.

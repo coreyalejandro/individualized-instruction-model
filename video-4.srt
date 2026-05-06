@@ -1,0 +1,19 @@
+1
+00:00:00,000 --> 00:00:03,000
+If your desk is a junk drawer, the agent behaves like junk.
+
+2
+00:00:03,100 --> 00:00:07,500
+Route every line through exactly one door: D, B, or R.
+
+3
+00:00:07,600 --> 00:00:11,000
+DESIGN spec tag. BUILD stub. RUN container badge.
+
+4
+00:00:11,100 --> 00:00:15,000
+Timer set: tag JIRA issue now. Screenshot proof.
+
+5
+00:00:15,100 --> 00:00:17,000
+Freedom through boundaries. Next era starts here.
