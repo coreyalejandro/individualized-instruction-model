@@ -79,7 +79,7 @@ The reason this matters is that agents follow what you say, not what you mean. I
 
 The process starts with a single clear question: what does "done" actually look like? Not in general terms, but specifically. If someone handed you the finished output, what would you see? What would be true that isn't true right now? Getting this right is harder than it sounds. Vague goals produce vague task analyses, which produce vague prompts, which produce outputs that require another round of work to interpret and revise.
 
-Once you have a clear picture of the end state, you work backward. What has to happen just before that? What has to happen before that? You're drawing the path from where things are now to where you want them to be, one step at a time.
+Once you have a clear picture of the end state — the finished product, what done actually looks like — you work backward. What has to happen just before that? What has to happen before that? You're drawing the path from where things are now to where you want them to be, one step at a time.
 
 As you do this, you start to see which steps can only happen after other steps are done — the way a student needs to understand fractions before working with ratios, or decimals before working with percentages. In a prompt, these ordering requirements tell you what information needs to be present before a given instruction makes sense. If the agent needs to evaluate quality, it needs criteria before it starts evaluating. If it needs to summarize a document, it needs the document before it starts summarizing.
 
