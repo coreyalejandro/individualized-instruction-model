@@ -26,17 +26,17 @@ export const modules: Module[] = [
     keyTakeaways: [
       "Prompts and rubrics function as the 'teacher' providing instruction",
       "The context window is your 'classroom' with finite capacity",
-      "Tool calls are 'homework'—work done outside the main execution context"
+      "Tool calls are 'homework'—work done outside the main conversation"
     ],
     transcript: `One of the first things people notice when they start working with AI agents is how quickly the vocabulary multiplies. Orchestration. Context windows. Tool augmentation. Retrieval pipelines. Each term points at something real, but without a way to hold them all together, they accumulate rather than clarify. The concepts start to feel more complicated than they actually are.
 
 The most useful thing you can do early on is find a mental model—a familiar framework you already understand that the new concepts can attach to. A good mental model doesn't simplify things to the point of being wrong. It gives you somewhere to put new information so it stays organized and connected.
 
-The framework we use throughout this course is a classroom. Not metaphorically, but structurally. A classroom has a teacher, students, a textbook, a physical space, homework assignments, and report cards. Each of those maps directly to something in an agent system, and once you see the mapping, it tends to stick.
+The framework we use throughout this course is a classroom. Not as a loose comparison, but as an actual map — every part of the classroom corresponds to a real part of how an agent works.
 
 The teacher is your prompt. When a teacher walks into class, she brings her preparation: what she wants students to learn, how she'll explain it, what success looks like. Your prompt does the same thing for an agent. It carries the instruction, the intent, and—when it's well-written—a sense of what a good outcome looks like. A prepared teacher produces focused students. A clear prompt produces reliable agents.
 
-The student is the language model itself. Students arrive with different backgrounds, different strengths, different gaps. Some have strong reading comprehension and struggle with math. Some are quick but need structure. Language models have their own profiles too—areas where they reason well, areas where they're prone to drift, knowledge that ends at a certain point in time. Understanding your model's tendencies is part of the work, the same way a good teacher understands her students.
+The student is the AI model itself — the thing that reads your instructions and produces a response. Students arrive with different backgrounds, different strengths, different gaps. Some have strong reading comprehension and struggle with math. Some are quick but need structure. AI models have their own profiles too—areas where they reason well, areas where they're prone to drift, knowledge that ends at a certain point in time. Understanding your model's tendencies is part of the work, the same way a good teacher understands her students.
 
 The textbook is your knowledge base—the reference material the agent can draw on. This might be documents you've provided in the prompt, content retrieved from a database, or knowledge baked in through training. A well-organized textbook helps students give better answers. Well-structured reference material helps agents give better ones too.
 
@@ -60,14 +60,14 @@ These aren't rules so much as a way of seeing. Once the mapping becomes natural,
     duration: "10 min",
     concepts: ["Task Decomposition", "Dependency Mapping", "Prompt Scaffolding", "Prerequisite Analysis"],
     learningObjectives: [
-      "Decompose any goal into discrete, sequenced, dependency-mapped sub-tasks",
-      "Identify task dependencies that must be reflected in prompt structure",
-      "Write task analyses that become the scaffold for every prompt"
+      "Break any goal into clear, ordered steps before writing a prompt",
+      "Spot which steps depend on earlier steps being done first",
+      "Use that breakdown as the foundation for every instruction you write"
     ],
     keyTakeaways: [
       "A prompt without a task analysis is a lesson without a lesson plan",
-      "Sub-tasks describe work to be performed, not outputs to be received",
-      "Dependencies must be explicit or they become silent failure modes"
+      "Steps describe work to be done, not results you hope to receive",
+      "Hidden dependencies are one of the most common reasons prompts fail"
     ],
     transcript: `Before a teacher walks into a classroom, there's work that nobody sees. She's thought through what students already know, what they need to learn, and what order makes sense. She's identified where confusion is likely to arise. She's figured out which ideas depend on other ideas, so she doesn't introduce something before its foundation is in place. The lesson plan exists before the lesson does.
 
@@ -81,7 +81,7 @@ The process starts with a single clear question: what does "done" actually look 
 
 Once you have a clear picture of the end state, you work backward. What has to happen just before that? What has to happen before that? You're drawing the path from where things are now to where you want them to be, one step at a time.
 
-As you do this, dependencies become visible. Some steps can only happen after other steps are complete—the way a student needs to understand fractions before working with ratios, or decimals before working with percentages. In a prompt, these dependencies tell you what information needs to be present before a given instruction makes sense. If the agent needs to evaluate quality, it needs criteria before it starts evaluating. If it needs to summarize a document, it needs the document before it starts summarizing.
+As you do this, you start to see which steps can only happen after other steps are done — the way a student needs to understand fractions before working with ratios, or decimals before working with percentages. In a prompt, these ordering requirements tell you what information needs to be present before a given instruction makes sense. If the agent needs to evaluate quality, it needs criteria before it starts evaluating. If it needs to summarize a document, it needs the document before it starts summarizing.
 
 This might sound like a lot of work before you've written anything. In practice, it saves time. Most prompt revision cycles exist because something in the task structure wasn't thought through before the instruction was written. The agent produced something technically correct but functionally off, because the prompt didn't reflect how the work actually needed to flow. Task analysis is how you get that clarity first.
 
@@ -97,14 +97,14 @@ The thing to notice, once you start doing this, is how often the analysis reveal
     duration: "10 min",
     concepts: ["Document Architecture", "Schema Design", "Paired Artifacts", "Enforcement Boundaries"],
     learningObjectives: [
-      "Distinguish human-legible from machine-legible instruction by structural properties",
-      "Design paired document systems where prose and schema correspond exactly",
-      "Identify when machine-legibility is required for enforceability"
+      "Tell the difference between instructions written for people and instructions written for systems",
+      "Design paired documents where the plain-language version and the structured version say the same thing",
+      "Know when a rule needs to be structured to be applied consistently"
     ],
     keyTakeaways: [
       "The syllabus explains; the grading grid governs",
-      "Every enforceable obligation must exist in schema, not only in prose",
-      "Bilingual documents drift unless treated as atomic units in review and versioning"
+      "Any rule that needs to be applied the same way every time should be written as structure, not prose",
+      "When you update one version of a paired document, you update both — they're one thing in two forms"
     ],
     transcript: `Most written communication doesn't have to make a choice. A memo, an email, an explanation—these are written for people who read with judgment. They can infer intent when something is ambiguous. They can adapt when the instructions don't quite cover their situation. Human readers fill gaps.
 
@@ -120,7 +120,7 @@ Both documents are about the same course. They're not interchangeable.
 
 In agent work, this shows up constantly. You might write a long, careful explanation of what you want an agent to do—and the explanation is good, the person reading it would understand exactly what to produce. But the agent drifts, or interprets a phrase in an unexpected way, or applies a judgment call you didn't intend. Not because the agent is broken. Because the document was written for human judgment, and the agent doesn't have that kind of judgment available.
 
-When you need the agent to consistently apply a rule, the rule needs to be written in a form the agent can apply without interpreting. That usually means structure: clear fields, explicit conditions, stated thresholds. Not because the agent is unintelligent—it's because removing ambiguity from a rule means you get reliable behavior instead of probabilistic behavior.
+When you need the agent to consistently apply a rule, the rule needs to be written in a form the agent can apply without interpreting. That usually means structure: clear fields, explicit conditions, stated thresholds. Not because the agent is unintelligent — it's because an unambiguous rule produces the same result every time, and an ambiguous one doesn't.
 
 This is also where paired documents become useful. The same content exists in two forms: a human-readable version that explains the intent and context, and a structured version that the agent works from. They're kept in sync deliberately. If you update one, you update the other. The prose version is for understanding. The structured version is for consistency.
 
@@ -171,14 +171,14 @@ The relationship frame also clarifies what it means to build something well over
     duration: "12 min",
     concepts: ["Contract Structure", "Verification and Truth", "Enforcement Boundaries", "Acceptance Criteria"],
     learningObjectives: [
-      "Distinguish a prompt from a contract by structural properties, not tone or detail",
-      "Write a minimal Contract Window with all five required sections",
+      "Tell the difference between a prompt and a contract — not by how detailed they are, but by how they're built",
+      "Write a minimal contract with all five required parts",
       "Produce a Verification and Truth statement with all four required categories"
     ],
     keyTakeaways: [
-      "A prompt is natural language. A contract is a bilingual enforcement artifact.",
+      "A prompt tells the agent what to do. A contract also defines what done looks like and how you'll know.",
       "The V&T Statement has four required categories: EXISTS, DOES NOT EXIST, UNVERIFIED, FUNCTIONAL STATUS",
-      "A V&T Statement that omits failures is a false V&T Statement"
+      "A V&T Statement that leaves out failures is not an honest one"
     ],
     transcript: `There's a difference between asking someone to do something and making an agreement with them about what they'll do.
 
@@ -382,14 +382,14 @@ Moving forward, commit to explicit phase declaration. Begin each work session by
     duration: "45 min",
     concepts: ["Domain-Specific Design", "End-to-End Build", "V&T Statement", "Capstone Delivery"],
     learningObjectives: [
-      "Apply task analysis, bilingual systems, contracting, and evaluation concepts to a single agent build",
-      "Produce a complete paired contract artifact before any implementation begins",
-      "Deliver a verified, evidence-backed agent with a truthful V&T statement"
+      "Apply task analysis, paired documents, contracting, and evaluation to a single agent you build yourself",
+      "Write the contract before you build anything, not after",
+      "Deliver your work with a truthful V&T statement based on what actually happened"
     ],
     keyTakeaways: [
-      "The V&T Statement is the graduation requirement—no evidence, no grade",
-      "Every deliverable has a paired JSON + MD counterpart",
-      "Incompleteness reported is more valuable than incompleteness hidden"
+      "The V&T Statement is the graduation requirement — no honest accounting, no grade",
+      "Every document you produce has a plain-language version and a structured version",
+      "Reporting incompleteness honestly is more valuable than hiding it"
     ],
     transcript: `Everything in this course has been building toward a single question: can you actually do it?
 
@@ -411,7 +411,7 @@ Build your evaluation. Write at least three criteria you can actually check—no
 
 Then write the V&T statement. This is the thing you've been working toward, and it's the thing most people skip or soften. Don't.
 
-What was produced: name each artifact by its actual location, not its description. What wasn't produced: name every deliverable that was in scope but didn't happen. What can't be confirmed: name every claim in your documentation that the evidence doesn't actually support. And a plain statement of where things stand—what works, what doesn't, and what you'd need to do for it to work completely.
+What was produced: name each file or document by where it actually lives, not by a general description. What wasn't produced: name every deliverable that was in scope but didn't happen. What can't be confirmed: name every claim in your documentation that the evidence doesn't actually support. And a plain statement of where things stand—what works, what doesn't, and what you'd need to do for it to work completely.
 
 An honest V&T statement for an incomplete build is worth more than a polished summary for a build that has hidden gaps. The incomplete is fixable. The hidden gap tends to stay hidden until it becomes a real problem.
 
