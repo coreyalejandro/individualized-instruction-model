@@ -28,29 +28,29 @@ export const modules: Module[] = [
       "The context window is your 'classroom' with finite capacity",
       "Tool calls are 'homework'—work done outside the main execution context"
     ],
-    transcript: `The AI agent ecosystem is drowning in jargon. Orchestration layers, tool-augmented generation, retrieval-augmented pipelines, multi-agent coordination protocols—the terminology creates a barrier that obscures fundamentally simple concepts. Effective practitioners cut through this noise by building robust mental models that translate abstract architectures into intuitive frameworks.
+    transcript: `One of the first things people notice when they start working with AI agents is how quickly the vocabulary multiplies. Orchestration. Context windows. Tool augmentation. Retrieval pipelines. Each term points at something real, but without a way to hold them all together, they accumulate rather than clarify. The concepts start to feel more complicated than they actually are.
 
-The most powerful mental model for agent systems is the educational analogy. Consider a traditional classroom setting. You have a teacher, students, textbooks, the physical classroom space, homework assignments, and report cards. Each of these maps directly to agent architecture components, and understanding the mapping accelerates both learning and system design.
+The most useful thing you can do early on is find a mental model—a familiar framework you already understand that the new concepts can attach to. A good mental model doesn't simplify things to the point of being wrong. It gives you somewhere to put new information so it stays organized and connected.
 
-The Teacher represents your prompt engineering layer combined with your evaluation rubrics. Just as a teacher provides instruction, sets expectations, and defines success criteria, your prompts tell the agent what to do and your rubrics define what "good" looks like. A weak teacher produces confused students; a weak prompt produces unpredictable agents. The quality of instruction directly determines the quality of output.
+The framework we use throughout this course is a classroom. Not metaphorically, but structurally. A classroom has a teacher, students, a textbook, a physical space, homework assignments, and report cards. Each of those maps directly to something in an agent system, and once you see the mapping, it tends to stick.
 
-The Student is your model executor—the actual language model performing the work. Students arrive with varying capabilities, prior knowledge, and learning styles. Similarly, different models bring different strengths, knowledge cutoffs, and behavioral tendencies. You cannot teach calculus to a student who hasn't learned algebra; you cannot expect sophisticated reasoning from a model not trained for it.
+The teacher is your prompt. When a teacher walks into class, she brings her preparation: what she wants students to learn, how she'll explain it, what success looks like. Your prompt does the same thing for an agent. It carries the instruction, the intent, and—when it's well-written—a sense of what a good outcome looks like. A prepared teacher produces focused students. A clear prompt produces reliable agents.
 
-The Textbook maps to your knowledge base—the reference material available to the system. This might be retrieved documents, embedded context, or fine-tuned knowledge. A comprehensive, well-organized textbook enables better learning; a comprehensive, well-structured knowledge base enables better agent responses. The quality of source material matters enormously.
+The student is the language model itself. Students arrive with different backgrounds, different strengths, different gaps. Some have strong reading comprehension and struggle with math. Some are quick but need structure. Language models have their own profiles too—areas where they reason well, areas where they're prone to drift, knowledge that ends at a certain point in time. Understanding your model's tendencies is part of the work, the same way a good teacher understands her students.
 
-The Classroom represents your context window. This is perhaps the most critical mapping. A classroom has finite physical capacity—only so many students fit, only so much can be written on the whiteboard. Your context window has finite token capacity—only so much information can be actively considered during generation. Overloading the classroom creates chaos; overloading the context window degrades performance.
+The textbook is your knowledge base—the reference material the agent can draw on. This might be documents you've provided in the prompt, content retrieved from a database, or knowledge baked in through training. A well-organized textbook helps students give better answers. Well-structured reference material helps agents give better ones too.
 
-Homework represents tool calls. Students complete homework outside of class time, bringing results back for discussion. Agents execute tool calls outside the main generation loop, returning results for incorporation into responses. Homework extends learning beyond classroom walls; tool calls extend agent capabilities beyond pure language modeling.
+The classroom is your context window. This is one of the most important mappings to internalize. A classroom has a fixed capacity—only so many people fit, only so much can stay on the board at once. Your context window works the same way. It holds a finite amount of information during any given interaction. When you try to fit too much in, things start to fall off. Understanding context as a physical space, with real limits, changes how you think about what to include and what to leave out.
 
-The Report Card is your golden evaluation—the definitive assessment of performance. Teachers grade against established rubrics; you evaluate agents against predetermined test cases. A report card that says "A+" tells you the student mastered the material; a passing evaluation suite tells you the agent meets production requirements.
+Homework is tool use. When a teacher assigns homework, she's asking students to do work outside of class and bring back what they find. When an agent makes a tool call, it's doing something similar—reaching outside the conversation to retrieve information, run a calculation, or interact with an external system, then returning with the result. The main lesson happens in the classroom; the research happens elsewhere.
 
-This model scales to complex architectures. Multi-agent systems become schools with multiple teachers and cross-classroom collaboration. RAG pipelines become library research projects where students retrieve textbooks before answering questions. Fine-tuning becomes long-term curriculum design that shapes student capabilities over time.
+The report card is your evaluation. It's the honest accounting of how things went. Teachers grade against rubrics—defined criteria applied consistently. Agent evaluations work the same way. A good report card doesn't just say "passing" or "failing." It shows which criteria were met and which weren't, so you know exactly what to address.
 
-The practical application is immediate. When designing a new agent system, sketch it first using the educational model. Who is the teacher? What's in the textbook? How big is the classroom? What homework is assigned? How will report cards be graded? These intuitive questions map directly to technical decisions about prompts, knowledge bases, context management, tool integration, and evaluation frameworks.
+When you're designing a new agent system, it helps to sketch it in these terms first. Who's the teacher? What's the textbook? How big is the classroom, and what are you putting in it? What homework is being assigned? How will the report card be filled out? These questions don't replace technical decisions—they precede them. They help you see the structure of what you're building before you start building it.
 
-When systems fail, the model provides diagnostic guidance. If outputs are inconsistent, examine the teacher—is the prompt clear and complete? If outputs lack depth, examine the textbook—is the knowledge base sufficient? If outputs truncate or degrade, examine the classroom—is the context window overloaded? The analogy makes debugging intuitive rather than mysterious.
+The same model is useful when things go wrong. If the agent keeps producing inconsistent outputs, the issue is usually in the teacher—the instruction isn't clear enough, or it's asking for too many things at once. If the outputs are shallow or miss important context, the issue is often in the textbook. If the responses start to degrade partway through a long session, the classroom is probably overcrowded.
 
-Document your mappings explicitly. Create a reference card for your team that translates project-specific terminology into the educational model. Shared mental models accelerate team communication and reduce misunderstandings.`
+These aren't rules so much as a way of seeing. Once the mapping becomes natural, you stop having to think through each piece separately. The whole system starts to feel like one familiar thing.`
   },
   {
     id: 2,
@@ -69,27 +69,25 @@ Document your mappings explicitly. Create a reference card for your team that tr
       "Sub-tasks describe work to be performed, not outputs to be received",
       "Dependencies must be explicit or they become silent failure modes"
     ],
-    transcript: `Every good teacher enters the classroom having already done invisible work. Before the first sentence is spoken, she has written a lesson plan. She knows what the students need to learn, in what order, and why. She has identified which concepts depend on which. She has anticipated the questions that will arise. She has drawn the map before starting the journey.
+    transcript: `Before a teacher walks into a classroom, there's work that nobody sees. She's thought through what students already know, what they need to learn, and what order makes sense. She's identified where confusion is likely to arise. She's figured out which ideas depend on other ideas, so she doesn't introduce something before its foundation is in place. The lesson plan exists before the lesson does.
 
-Practitioners who skip this step show up to the classroom unprepared. They write prompts that assume knowledge the agent does not have. They issue instructions that skip steps the agent cannot fill in by itself. They produce outputs that technically answered the prompt but missed the actual goal.
+This invisible work is what separates a clear, effective lesson from one that technically covers the material but leaves students piecing things together on their own. The content might be the same. What's different is the preparation.
 
-Task analysis is the discipline of doing the teacher's preparation work before you write a single word of a prompt.
+Task analysis is that preparation applied to working with agents. It's the practice of thinking through a goal carefully—breaking it into steps, figuring out the order, naming what each step depends on—before you write a single instruction.
 
-Task analysis is the structured decomposition of a goal into discrete, sequenced, dependency-mapped sub-tasks. It answers four questions before you touch a prompt: What is the exact terminal state I want to reach? What discrete sub-tasks must be completed to reach it? What is the correct sequence of those sub-tasks? And what does each sub-task require as input from a previous sub-task?
+The reason this matters is that agents follow what you say, not what you mean. If your instruction skips a step, the agent doesn't fill it in from context the way a person might. It either guesses—sometimes well, often not—or it produces something that answers the literal question while missing the actual point. Task analysis is how you catch those gaps before they become problems.
 
-These four questions correspond exactly to what a lesson plan contains: the learning objective, the instructional steps, the sequence, and the prerequisite knowledge checks.
+The process starts with a single clear question: what does "done" actually look like? Not in general terms, but specifically. If someone handed you the finished output, what would you see? What would be true that isn't true right now? Getting this right is harder than it sounds. Vague goals produce vague task analyses, which produce vague prompts, which produce outputs that require another round of work to interpret and revise.
 
-Consider what happens when a teacher jumps to multiplication before confirming students understand addition. The lesson fails—not because the teacher was unclear, but because the prerequisite was missing. Agents fail the same way. A prompt that asks an agent to synthesize a report before grounding it in facts will produce confident-sounding hallucination. A prompt that asks an agent to evaluate quality before defining quality criteria will produce inconsistent scores.
+Once you have a clear picture of the end state, you work backward. What has to happen just before that? What has to happen before that? You're drawing the path from where things are now to where you want them to be, one step at a time.
 
-Task analysis forces you to see these dependency failures before they become prompt failures. The agent is not magic. It cannot fill in missing prerequisites any more than a student can do long division without knowing their multiplication tables.
+As you do this, dependencies become visible. Some steps can only happen after other steps are complete—the way a student needs to understand fractions before working with ratios, or decimals before working with percentages. In a prompt, these dependencies tell you what information needs to be present before a given instruction makes sense. If the agent needs to evaluate quality, it needs criteria before it starts evaluating. If it needs to summarize a document, it needs the document before it starts summarizing.
 
-A task analysis is a structured artifact, not a brainstorm. It contains a GOAL—one precise terminal state sentence—followed by SUB-TASKS with at least four entries each stating what must be true at completion, an explicit SEQUENCE, DEPENDENCIES naming each sub-task relationship, and PREREQUISITES listing what the agent must already know or have access to.
+This might sound like a lot of work before you've written anything. In practice, it saves time. Most prompt revision cycles exist because something in the task structure wasn't thought through before the instruction was written. The agent produced something technically correct but functionally off, because the prompt didn't reflect how the work actually needed to flow. Task analysis is how you get that clarity first.
 
-This artifact becomes the scaffold for your prompt. The sequence becomes the order of your instructions. The dependencies tell you what context to inject and when. The prerequisites tell you what to include in the knowledge base or context window before execution begins.
+It doesn't have to be elaborate. For a simple task, a few sentences might be enough. For something more complex, you might spend ten or fifteen minutes sketching the structure before writing any instructions. The length of the analysis matches the complexity of the task.
 
-When you see the mapping clearly, the lesson plan and the prompt are not two different things—they are the same instruction for two different audiences. The lesson plan is written for yourself. The prompt is written for the agent. The task analysis produces both.
-
-The most common failure mode is writing a task analysis that is actually a list of hoped-for outputs rather than a decomposition of work. "Produce a summary" is an output. "Read each source document, extract the three most significant claims from each, and synthesize across claims into a coherent narrative" is a sub-task decomposition. The first produces unpredictable results. The second constrains the agent's path through the work.`
+The thing to notice, once you start doing this, is how often the analysis reveals assumptions you were making without realizing it. You assumed the agent would know to check for exceptions. You assumed it would handle missing data gracefully. You assumed it would stop at a certain point rather than continuing. These assumptions only become visible when you slow down and walk through the steps. The task analysis is where you find them before the agent does.`
   },
   {
     id: 3,
@@ -108,23 +106,27 @@ The most common failure mode is writing a task analysis that is actually a list 
       "Every enforceable obligation must exist in schema, not only in prose",
       "Bilingual documents drift unless treated as atomic units in review and versioning"
     ],
-    transcript: `A course syllabus has two parts that most students never notice are different things. One part is the prose description a student reads to understand the course: what it covers, why it matters, what the experience will feel like. The other part is the grading grid the registrar's system processes: a structured table of weights and codes that determine how credit is awarded.
+    transcript: `Most written communication doesn't have to make a choice. A memo, an email, an explanation—these are written for people who read with judgment. They can infer intent when something is ambiguous. They can adapt when the instructions don't quite cover their situation. Human readers fill gaps.
 
-Both say similar things. Neither alone is sufficient. The prose is for humans who need context and intention. The grid is for systems that need precision and enforceability. The discipline of keeping them synchronized is what makes the course contract valid. Your instruction artifacts require the same duality.
+Agents don't fill gaps. They execute against what's there. Which means the same document that a person can work from might not be the right document for an agent to work from. They serve different needs, and recognizing that difference is the start of writing better instructions for both.
 
-Human-legible instruction is prose written for a person who brings context, judgment, and the ability to infer intent. It can contain qualifications, examples, analogies, and nuance. A practitioner reading it understands the spirit of the rule even when edge cases are not addressed.
+The distinction the course draws is between human-legible and machine-legible instruction. Human-legible means written for someone who brings context, judgment, and the ability to read between the lines. Machine-legible means structured for a system that parses exactly what's written and nothing more. Both are useful. They're not the same thing.
 
-Machine-legible instruction is structured for a system that executes exactly what is specified and nothing more. It must be unambiguous, complete for all cases it governs, and parseable without human judgment. A JSON schema, a list of predicates, a YAML configuration block—these are machine-legible. They cannot be misread because there is no reading: there is only parsing and evaluation.
+Think about the difference between a course syllabus and a grading rubric. The syllabus is a conversation. It describes the arc of the course, explains why the topics are taught in that order, sets expectations in a way that feels collegial. A student reads it and gets a sense of what the class is for. That kind of understanding requires prose.
 
-The failure mode of using only prose: a critical obligation exists only in a document that a human must interpret. Two humans interpret it differently. Neither interpretation can be proven wrong. Enforcement is impossible. The failure mode of using only schema: the system enforces rules that no practitioner can audit without a spec decoder. The intent is lost. Edge cases are handled incorrectly because there is no prose authority to consult.
+The grading rubric is different. It's a table. It has specific criteria, point values, and thresholds. It needs to produce the same result when two different instructors apply it to the same student essay. Consistency requires structure. Explanation isn't the goal—precision is.
 
-A bilingual document pair consists of exactly two artifacts with the same basename and different extensions: an .md human-legible prose version and a .json machine-legible schema version. Every obligation in the JSON must have a corresponding explanation in the Markdown. Every explanation in the Markdown that carries an enforceable obligation must have a corresponding rule in the JSON.
+Both documents are about the same course. They're not interchangeable.
 
-The Markdown disclaimer at the top of every human-readable artifact says it plainly: any obligation stated in this Markdown but absent from the paired JSON is non-authoritative and shall not be enforced. This disclaimer does not diminish the Markdown's value. It clarifies its role. The Markdown explains. The JSON governs.
+In agent work, this shows up constantly. You might write a long, careful explanation of what you want an agent to do—and the explanation is good, the person reading it would understand exactly what to produce. But the agent drifts, or interprets a phrase in an unexpected way, or applies a judgment call you didn't intend. Not because the agent is broken. Because the document was written for human judgment, and the agent doesn't have that kind of judgment available.
 
-Use prose only when explaining context, intent, or rationale, or describing behavior that requires human judgment to evaluate. Use schema only when encoding obligations that must be enforced programmatically, defining acceptance criteria against which artifacts are validated, or creating registries and manifests that tools will consume. Use a paired system when the instruction carries enforceable obligations AND needs human understanding.
+When you need the agent to consistently apply a rule, the rule needs to be written in a form the agent can apply without interpreting. That usually means structure: clear fields, explicit conditions, stated thresholds. Not because the agent is unintelligent—it's because removing ambiguity from a rule means you get reliable behavior instead of probabilistic behavior.
 
-Bilingual documents drift. A practitioner updates the Markdown to clarify an edge case and forgets to update the JSON. A schema update adds a new required field but the Markdown still describes the old behavior. Preventing drift requires treating the pair as an atomic unit. Updating one means updating both. Code review must check both files. A Markdown change without a JSON change review is a red flag.`
+This is also where paired documents become useful. The same content exists in two forms: a human-readable version that explains the intent and context, and a structured version that the agent works from. They're kept in sync deliberately. If you update one, you update the other. The prose version is for understanding. The structured version is for consistency.
+
+The discipline here isn't about writing everything formally. Most communication doesn't need that. It's about recognizing when you're writing something that needs to hold up the same way every time—an evaluation criterion, a scope boundary, a definition that determines behavior—and giving it the form that makes that possible.
+
+When you're not sure which form to use, ask what happens if two people interpret this differently. If consistent interpretation matters, you probably need structure. If nuance and context matter more, prose serves better. Most real documents need some of both.`
   },
   {
     id: 4,
@@ -143,21 +145,23 @@ Bilingual documents drift. A practitioner updates the Markdown to clarify an edg
       "Priority must be explicit—the agent cannot correctly resolve conflicts without an ordering",
       "Communication failures are the instruction-writer's responsibility to repair first"
     ],
-    transcript: `A classroom is not just a room with a teacher and students and a textbook. It is a relationship. The teacher shows up prepared and consistent. The student commits to the work. Both parties share an implicit understanding of what cooperation looks like, what respect looks like, and what happens when communication breaks down. When the relationship works, learning happens. When it breaks down, no amount of excellent curriculum design saves it.
+    transcript: `Working with an agent is a kind of ongoing collaboration. You give instructions, the agent produces something, you adjust, it responds. That back and forth has a shape to it—and like any ongoing collaboration, the shape matters.
 
-You have a relationship with every agent you build. You may not think of it that way, but the agent behaves as though you do. It treats your instructions as a set of relationship norms. It infers your priorities from what you emphasize. It either trusts that you have given it what it needs or it compensates for the gaps—sometimes helpfully, often disastrously.
+When a collaboration works well, it's usually because both parties have a shared understanding of a few basic things: what the goal is, whose job is whose, how to communicate when something isn't working, and what to do when expectations don't match. Those things don't need to be spelled out every time in a healthy working relationship. They're built into how the two parties interact.
 
-In a classroom, trust between teacher and student is built through consistent, clear behavior. The teacher who says one thing on Monday and the opposite on Wednesday, who grades without criteria, who assigns work without explaining why it matters—this teacher produces anxious, confused students who guess rather than learn. Your agent receives the same signals from your instruction behavior.
+With agents, those things do need to be spelled out. Not because the agent is difficult, but because it doesn't arrive with assumptions about how the collaboration should work. It works from what you give it. If what you give it is unclear about the goal, or silent about priorities, or inconsistent from session to session, the agent produces outputs that reflect that. It's not failing—it's working with what it has.
 
-Trust is operational here, not emotional. It means the agent can rely on your instructions to be complete, consistent, and honest about what you know and do not know. Clear instruction is a form of respect. Ambiguous instruction is a form of disrespect that will be paid back in unreliable outputs.
+This is where thinking in terms of a relationship becomes useful. A teacher and a student have a relationship with norms. The teacher shows up prepared and consistent. The student commits to the work. Both know what respect looks like in this context. Neither is guessing at the other's expectations. The relationship runs smoothly because those expectations are clear and stable.
 
-A teacher with fifteen learning objectives and forty-five minutes has a priority problem. The students cannot achieve all fifteen objectives with equal depth in the available time. A teacher who communicates no priority ordering leaves students to guess—and they will guess wrong about which objectives matter most. Agents have the same problem. When a prompt contains multiple objectives of similar grammatical weight, the agent cannot know which one to protect when they conflict. You must tell it.
+The same norms apply to working with agents, even though the agent isn't a person. When your instructions are prepared and consistent, the agent can work reliably. When you're clear about what matters most, the agent can make good choices when trade-offs arise. When you communicate carefully about what you want and why, you get outputs that reflect that care.
 
-Write your priorities explicitly: a primary objective—the one non-negotiable outcome—secondary objectives that are important but deferrable if the primary is at risk, and constraints that cannot be violated even if objectives fail. When the agent must choose between two objectives because they conflict, it will consult this ordering. Without it, the choice is arbitrary.
+One place this shows up clearly is in priorities. A teacher with more material than time has to make choices. She chooses based on what's most important for the students to leave with. An agent with a complex instruction faces the same situation—if everything is weighted equally, it has to guess which thing you'd protect if you couldn't have all of it. If you've told it what matters most, it can make that call in a way that matches your actual intent.
 
-When a student misunderstands a lesson, the pedagogically correct response is for the teacher to take responsibility for the communication failure. When an agent produces an output that misses your intent, the first diagnostic question is: was the intent in the instruction? Not: was it obvious to a reasonable person? Was it in the instruction? If not, the repair belongs to you.
+Another place it shows up is in how you handle things when they go wrong. When a student misunderstands something, a good teacher asks what in the explanation might have created that misunderstanding. The instinct to look at the instruction first—rather than attributing the confusion to the student—is part of what makes the collaboration productive. With agents, the same instinct serves you well. When the output is off, the first question is usually whether the instruction was clear, not whether the agent was failing.
 
-Mutual respect in a classroom means the teacher does not give impossible assignments, does not expect students to know things she has not taught, does not grade on criteria she has not published. Applied to agents: do not give impossible instructions. Do not expect the agent to know things you have not provided in context. Respecting the agent's actual operational parameters—its context limit, its knowledge cutoff, its tool availability—is not anthropomorphizing. It is accurate engineering.`
+This isn't about being gentle or protective of the agent. It's about being accurate. Most of the time, when an agent produces something unexpected, the cause can be found in the instruction. That's actually good news—instructions are something you can improve.
+
+The relationship frame also clarifies what it means to build something well over time. You're not just issuing prompts and evaluating outputs. You're developing an understanding of how this particular agent responds to different kinds of instructions, where it tends to be strong, where it tends to need more structure. That understanding accumulates. And the more clearly you articulate it—to yourself and in your instructions—the more reliably the collaboration produces what you're looking for.`
   },
   {
     id: 5,
@@ -176,29 +180,27 @@ Mutual respect in a classroom means the teacher does not give impossible assignm
       "The V&T Statement has four required categories: EXISTS, DOES NOT EXIST, UNVERIFIED, FUNCTIONAL STATUS",
       "A V&T Statement that omits failures is a false V&T Statement"
     ],
-    transcript: `A teacher can give a verbal instruction in a perfectly firm tone. She can be crystal clear in her phrasing, confident in delivery, and unambiguous in intent. None of this makes the verbal instruction a contract. A contract is not tone. A contract is structure.
+    transcript: `There's a difference between asking someone to do something and making an agreement with them about what they'll do.
 
-A prompt can be detailed, well-formatted, and carefully written. None of this makes it a contract. A prompt lacks the structural properties that make obligations enforceable. A contract contains them. This distinction matters because practitioners spend enormous effort improving prompt quality—tone, phrasing, format, detail—while building systems that are fundamentally un-auditable because the obligations exist only in language that requires human judgment to interpret.
+An ask is informal. You describe what you want, they use their judgment to figure out what you mean, and something comes back. If it's not quite right, you ask again. This works reasonably well between people who share context and trust each other's interpretation. It's how most conversations work.
 
-A prompt is a natural language instruction issued to a language model before execution. It tells the agent what to do. It may be excellent. It may be detailed. But it has no machine-readable structure that can verify whether the agent complied, no halt condition that can be triggered by a predicate evaluator, no evidence requirement that produces proof of completion.
+An agreement is different. It names the outcome explicitly. It says what's included and what isn't. It defines what "done" means before the work starts, not after. And it has a way of verifying that what came back matches what was asked for.
 
-A contract is a bilingual artifact—structured for both human understanding and machine enforcement—that encodes obligations, acceptance criteria, halt conditions, scope boundaries, and truth-surface requirements before execution begins. A contract does not replace the prompt. It contains the prompt.
+Most people who work with agents are asking. The prompts are thoughtful, sometimes elaborate—but they're still asks. The agent interprets, produces something, and you evaluate it against an unstated standard. If it misses, you try to explain more clearly. This cycle is familiar.
 
-Consider the difference between a verbal assignment and a signed assignment sheet. The sheet has a task, a topic, a due date, explicit acceptance criteria, halt conditions, a grading rubric reference, and a requirement to submit a V&T statement alongside the work. Both give the student a task. Only the second creates an enforceable agreement about what compliance looks like.
+Contracting is a different practice. It shifts the work earlier. Before you write the instruction, you write down what you're actually after: the specific outcome, the boundaries, what counts as a good result and what doesn't. The instruction becomes a delivery mechanism for an agreement you've already made with yourself.
 
-The minimal Contract Window contains exactly five things: an OBJECTIVE stating the one-sentence terminal state the execution must reach, a SCOPE defining what is included and explicitly excluded, ACCEPTANCE CRITERIA as a numbered list of conditions that if all true mean the task is done, HALT CONDITIONS as a numbered list of conditions that if any are true must stop execution, and a V&T STATEMENT as the truth-reporting surface required at completion.
+The classroom version of this is the assignment sheet. A verbal assignment—"write a three-page essay on a historical event"—leaves most of the definition to the student. A written assignment sheet says: the essay is between 800 and 1000 words, it covers a specific event from a specific period, it includes at least two primary sources, it makes a clear argument in the opening paragraph, and it will be graded against four named criteria. The student knows what they're being asked to produce. The teacher knows what she'll be grading. They're working from the same definition.
 
-The V&T Statement is the report card row that tells the teacher—honestly—what was learned, what was not learned, what is unknown, and whether the student is actually performing at the claimed level. It has four required categories, all of which must be present in every V&T Statement.
+The minimal version of that agreement—the smallest version that still makes it a contract rather than an ask—has a few parts. A single clear statement of the outcome you're trying to reach. A description of what's in scope and what's out. A list of conditions that, if all true, mean the work is done. A list of conditions that should stop the work if any of them are true. And one more thing: a commitment to report honestly on what happened.
 
-EXISTS: list every artifact, fact, or outcome the execution produced and where it can be verified. File paths, not descriptions.
+That last part is the Verification and Truth statement. It's the equivalent of the teacher looking at the graded essay and writing a note that says: this criterion was met, this one wasn't, this one I can't assess from the essay alone. It's an honest accounting after the work is done.
 
-DOES NOT EXIST: list every artifact or outcome that was specified, expected, or implied but was not produced. Incompleteness must be reported. A V&T Statement that omits failures is a false V&T Statement.
+The V&T statement has four parts. What was produced—named specifically, not summarized. What wasn't produced—the things that were part of the agreement but didn't come back. What can't be assessed from the evidence available. And a plain statement of where things stand at the end.
 
-UNVERIFIED: list every claim that cannot be confirmed from the evidence produced. If you claim the agent works correctly but have no test results, the correctness claim is UNVERIFIED.
+That fourth category is often uncomfortable to write. It's easy to report what worked. It's harder to report what didn't, or to admit that you can't tell whether something actually worked. But that discomfort is useful. The practice of writing an honest V&T statement builds the habit of distinguishing between what you know and what you're assuming—which is one of the most valuable habits you can develop when working with agents.
 
-FUNCTIONAL STATUS: state plainly whether the produced artifacts function as specified. A single-sentence summary of what works, what does not, and the state of execution at completion.
-
-A build that does not produce a V&T Statement has no truth surface. You cannot distinguish between a build that succeeded, partially succeeded, and failed silently. The most common failure mode in agent development is unacknowledged partial completion—reporting only the successful artifacts while the failures remain invisible. The V&T Statement requires you to report both.`
+You don't need to write a full contract for every interaction. Simple tasks are fine as asks. What the contract practice gives you is a framework for the interactions where it matters—where you need a specific outcome, where precision is worth the extra work up front, where you want to be able to verify afterwards whether what came back is actually what you were after.`
   },
   {
     id: 6,
@@ -389,37 +391,31 @@ Moving forward, commit to explicit phase declaration. Begin each work session by
       "Every deliverable has a paired JSON + MD counterpart",
       "Incompleteness reported is more valuable than incompleteness hidden"
     ],
-    transcript: `You have a mental model. You have a lesson plan. You know the difference between prose and schema. You understand that relationship norms govern every instruction you give. You know what a contract is and how to write a minimal one. You have seen how constrained execution prevents contamination. You can build an evaluation rubric and make it deterministic. You understand the operational phases of agent work. Now you build something real.
+    transcript: `Everything in this course has been building toward a single question: can you actually do it?
 
-This capstone has one requirement: produce a domain-specific agent with a Verification and Truth statement. Everything else follows from that requirement.
+Not demonstrate that you understood a concept. Not summarize what a V&T statement is. Build something—a real agent, for a domain you know, that does something useful—and document it honestly from start to finish.
 
-Choose a domain where you have actual knowledge. The domain determines the content of the agent's knowledge base, the vocabulary of its task analysis, and the acceptance criteria you can write with confidence. Do not choose a domain to impress. Choose a domain where you can write truthful acceptance criteria—criteria you will know are met or not met without guessing.
+That's the capstone.
 
-Before writing any code or any prompt, write the task analysis. What is the exact terminal state the agent must reach? What discrete sub-tasks lead there? What is the sequence? What are the dependencies? What does the agent need to know before sub-task one can begin? This document is your lesson plan. The implementation cannot start until it exists.
+The domain is your choice. Pick something you actually know. The concepts you've learned transfer to any field, but the quality of what you build depends on how well you understand the subject matter. If you know education, build something for educators. If you know healthcare administration, or legal research, or supply chain logistics, build for that. The agent should do something that makes sense in a context you can actually evaluate.
 
-After the task analysis, write the Contract Window. The objective is one sentence. The scope lists what is included and explicitly excluded—this is where you decide what your agent will refuse to do, stated in advance rather than discovered at runtime. The acceptance criteria are numbered conditions. The halt conditions are numbered stops. The V&T statement section is a placeholder you will fill at completion, not before.
+Before you write any code or any prompt, do the task analysis. Describe the end state you're trying to reach in one concrete sentence. Then work out what steps get you there, in what order, and what each step depends on. This is your lesson plan. Hold onto it—it becomes part of what you submit.
 
-With task analysis and contract in hand, design the bilingual document pair: a Markdown human-legible specification and a JSON machine-legible schema. Every obligation in your contract must appear in both. The JSON governs. The Markdown explains. Write the Markdown disclaimer at the top of the human-readable file.
+With the task analysis in hand, write the contract. One sentence for the objective. A clear scope that names what's included and what isn't—the things your agent will do and the things it explicitly won't. Acceptance criteria that are specific enough to check. Stop conditions that would tell you something has gone wrong. And a placeholder for the V&T statement, which you'll fill in last.
 
-Now build. Implement the agent against the contract. When you encounter a place where the task analysis was wrong, stop. Fix the task analysis. Fix the contract. Then continue. Do not improvise past a broken plan. The plan is the thing.
+Then design the paired documents: a human-readable description of your agent and how it works, and a structured representation of the same content that an automated process could evaluate. These don't have to be elaborate. They have to be accurate, and they have to correspond to each other.
 
-Build the evaluation rubric. Define at least three acceptance criteria you can test programmatically. Lock your model temperature to zero. Create at least one golden fixture: a specific input with a specific expected output that your evaluation harness will verify character-by-character.
+Now build. Work from the contract. When you hit a place where the task analysis was wrong, go back and fix it—don't route around it in the implementation. The contract is the source of truth, not something to work around.
 
-Run your evaluation suite. Record the results. Every pass and every failure becomes evidence.
+Build your evaluation. Write at least three criteria you can actually check—not "the output is high quality" but specific, observable conditions. Run it. Record what passes and what doesn't.
 
-Now write the V&T statement. Not before. After. With actual evidence in hand.
+Then write the V&T statement. This is the thing you've been working toward, and it's the thing most people skip or soften. Don't.
 
-EXISTS: name every artifact you produced, with its file path or verifiable location. Name every acceptance criterion that passed, with a reference to the test run that confirmed it.
+What was produced: name each artifact by its actual location, not its description. What wasn't produced: name every deliverable that was in scope but didn't happen. What can't be confirmed: name every claim in your documentation that the evidence doesn't actually support. And a plain statement of where things stand—what works, what doesn't, and what you'd need to do for it to work completely.
 
-DOES NOT EXIST: name every artifact specified in your contract that you did not produce. Name every acceptance criterion that did not pass. Name every scope item you planned and did not complete. This section is not optional. An agent that meets six of eight acceptance criteria has two failures. Both must appear here.
+An honest V&T statement for an incomplete build is worth more than a polished summary for a build that has hidden gaps. The incomplete is fixable. The hidden gap tends to stay hidden until it becomes a real problem.
 
-UNVERIFIED: name every claim you made that the evidence does not confirm. If you claim the agent handles edge cases gracefully but tested only the happy path, that claim is unverified. Write it down.
-
-FUNCTIONAL STATUS: one clear sentence. What works. What does not. What state the system is in at the moment of submission.
-
-This is the graduation requirement. Not a deployed agent. Not a perfect agent. A truthful agent—an agent accompanied by a V&T statement that honestly characterizes what was built, what was not built, and what remains unknown. An honest incomplete is worth more than a dishonest complete. The discipline of writing the V&T statement is the discipline of being an engineer who can be trusted with production systems.
-
-Submit the task analysis, the contract pair, the bilingual document pair, the evaluation results, and the V&T statement together. These five artifacts are your report card. The teacher grades them together, not separately.`
+What you submit is five things: the task analysis, the contract, the paired documents, the evaluation results, and the V&T statement. Together, they're the record of a build that was designed with intention, executed with care, and reported truthfully. That's what the report card is grading.`
   }
 ]
 
