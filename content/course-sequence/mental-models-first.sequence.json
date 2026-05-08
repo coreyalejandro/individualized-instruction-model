@@ -1,0 +1,159 @@
+{
+  "schema_version": "1.0",
+  "contract_id": "CRSP-MENTAL-MODELS-FIRST-COURSE-SEQUENCE-001",
+  "generated_at": "2026-05-08T04:13:23.864931Z",
+  "product_name": "Jinno",
+  "invariant_mental_models_first": true,
+  "module_count": 10,
+  "education_analogy_throughline": "teacher, student, textbook, classroom, homework, report-card",
+  "modules": [
+    {
+      "module_number": 1,
+      "slug": "mental-models",
+      "title": "Mental Models for Agent Architecture",
+      "status": "existing_repositioned_anchor",
+      "duration": "10 min",
+      "analogy_mapping": {
+        "teacher": "Prompt engineering and rubrics",
+        "student": "Language model executor",
+        "textbook": "Knowledge base",
+        "classroom": "Context window",
+        "homework": "Tool calls",
+        "report_card": "Evaluation suite"
+      },
+      "function": "Establish teacher-student-classroom-homework-report-card analogy as course grammar.",
+      "vt_required": false
+    },
+    {
+      "module_number": 2,
+      "slug": "task-analysis",
+      "title": "Task Analysis: The Lesson Plan Beneath Every Prompt",
+      "status": "new_module",
+      "duration": "10 min",
+      "analogy_mapping": {
+        "lesson_plan": "Structured task decomposition preceding any prompt",
+        "teacher_preparation": "The task analysis work a practitioner does before writing a prompt",
+        "learning_objectives": "Measurable sub-tasks defined before execution",
+        "prerequisite_knowledge": "Dependencies surfaced during decomposition"
+      },
+      "function": "Teach task analysis as foundation and substrate of all prompt engineering.",
+      "vt_required": false
+    },
+    {
+      "module_number": 3,
+      "slug": "bilingual-systems",
+      "title": "Bilingual Systems: Human-Legible and Machine-Legible Instruction",
+      "status": "new_module",
+      "duration": "10 min",
+      "analogy_mapping": {
+        "syllabus_prose": "Human-readable markdown description of course intent",
+        "grade_rubric_grid": "Machine-legible JSON schema encoding enforcement rules",
+        "paired_curriculum_document": "Bilingual human+machine artifact pair",
+        "translation_discipline": "Keeping prose and schema in sync"
+      },
+      "function": "Teach when to use human-readable prose, machine-legible schema, and paired bilingual documents.",
+      "vt_required": false
+    },
+    {
+      "module_number": 4,
+      "slug": "human-agent-relationships",
+      "title": "Human-Agent Relationships: Trust, Priority, and Communication",
+      "status": "new_module",
+      "duration": "10 min",
+      "analogy_mapping": {
+        "teacher_student_contract": "Implicit relationship norms governing classroom interaction",
+        "classroom_norms": "Mutual respect and clear communication protocols",
+        "attendance_and_commitment": "Trust built through consistent, reliable behavior",
+        "grade_transparency": "Clear priority signaling and honest status reporting"
+      },
+      "function": "Teach that human-agent interaction creates relationship dynamics requiring trust, commitment, clear priorities, mutual respect, and clear communication.",
+      "vt_required": false
+    },
+    {
+      "module_number": 5,
+      "slug": "contracting-vs-prompting",
+      "title": "Contracting vs. Prompting: The Minimal Contract Window",
+      "status": "new_module",
+      "duration": "12 min",
+      "analogy_mapping": {
+        "verbal_instruction": "A prompt: informal, context-dependent, easily misread",
+        "signed_assignment_sheet": "A contract: explicit obligations, acceptance criteria, halt conditions",
+        "report_card_vt_row": "Verification and Truth statement as minimal grading evidence",
+        "contract_window": "The minimum enforceable surface binding teacher and student to mutual expectations"
+      },
+      "function": "Teach the difference between prompting and contracting; introduce Verification and Truth statement as minimal Contract Window.",
+      "vt_required": true
+    },
+    {
+      "module_number": 6,
+      "slug": "sequester-contract",
+      "title": "The Sequester Contract",
+      "status": "existing_resequenced_module",
+      "duration": "8 min",
+      "analogy_mapping": {
+        "closed_book_exam": "Sequestered execution with one authoritative source",
+        "sst_md": "The single textbook open on the desk during a sequestered session",
+        "weekly_reconciliation": "The after-class review where unknowns are resolved against authoritative material"
+      },
+      "function": "Introduce constrained execution and contamination control after learners understand contracts.",
+      "vt_required": false
+    },
+    {
+      "module_number": 7,
+      "slug": "pro-grade-rubric",
+      "title": "Building Pro-Grade Evaluation Rubrics",
+      "status": "existing_resequenced_module",
+      "duration": "12 min",
+      "analogy_mapping": {
+        "rubric": "Pro-grade evaluation criteria grid used to grade agents like students",
+        "green_badge": "The passing grade visible on the transcript",
+        "guardrails_md": "The classroom rules posted on the wall"
+      },
+      "function": "Extend Verification and Truth from minimal truth reporting into full evaluation rubrics.",
+      "vt_required": false
+    },
+    {
+      "module_number": 8,
+      "slug": "deterministic-evals",
+      "title": "Deterministic Evaluations",
+      "status": "existing_resequenced_module",
+      "duration": "10 min",
+      "analogy_mapping": {
+        "standardized_test": "A deterministic eval: same questions, same conditions, reproducible scores",
+        "docker_container": "The sealed testing room ensuring identical conditions",
+        "golden_snapshot": "The answer key against which student work is graded"
+      },
+      "function": "Teach repeatable evaluation as stable grading rather than subjective assessment.",
+      "vt_required": false
+    },
+    {
+      "module_number": 9,
+      "slug": "design-build-run",
+      "title": "Design, Build, Run",
+      "status": "existing_resequenced_module",
+      "duration": "8 min",
+      "analogy_mapping": {
+        "design_phase": "Curriculum design: writing lesson plans and objectives",
+        "build_phase": "Classroom execution: delivering instruction and assignments",
+        "run_phase": "Grading and revision: responding to student performance data"
+      },
+      "function": "Teach the agent lifecycle as curriculum design, classroom execution, grading, and revision.",
+      "vt_required": false
+    },
+    {
+      "module_number": 10,
+      "slug": "culminating-project",
+      "title": "Culminating Project: Build a Domain-Specific Agent with V&T",
+      "status": "new_module",
+      "duration": "20 min",
+      "analogy_mapping": {
+        "capstone_thesis": "The culminating project where the learner becomes the teacher",
+        "domain_specific_textbook": "The agent knowledge base the learner curates",
+        "final_report_card": "The V&T statement as the learner's honest self-assessment of what they built",
+        "lesson_plan_plus_contract": "Task analysis plus Contract Window required as deliverables"
+      },
+      "function": "Require learners to build a domain-specific agent with task analysis, bilingual instruction, contract boundaries, knowledge base, tool plan, evaluation rubric, and V&T statement.",
+      "vt_required": true
+    }
+  ]
+}

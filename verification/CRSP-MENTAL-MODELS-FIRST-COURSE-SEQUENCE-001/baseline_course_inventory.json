@@ -1,0 +1,41 @@
+{
+  "captured_at": "2026-05-08T04:12:46.528924Z",
+  "op": "OP-001",
+  "baseline_commit": "3fca0cae59d4a7769ca442008b5125986464bbd5",
+  "existing_modules": [
+    {
+      "id": 1,
+      "slug": "sequester-contract",
+      "title": "The Sequester Contract"
+    },
+    {
+      "id": 2,
+      "slug": "mental-models",
+      "title": "Mental Models for Agent Architecture"
+    },
+    {
+      "id": 3,
+      "slug": "pro-grade-rubric",
+      "title": "Building Pro-Grade Evaluation Rubrics"
+    },
+    {
+      "id": 4,
+      "slug": "deterministic-evals",
+      "title": "Implementing Deterministic Evaluations"
+    },
+    {
+      "id": 5,
+      "slug": "design-build-run",
+      "title": "The Design-Build-Run Operational Loop"
+    }
+  ],
+  "source_file": "lib/course-data.ts",
+  "accessibility_controls_verified": [
+    "font size decrease",
+    "font size increase",
+    "high contrast toggle",
+    "dyslexic-friendly font toggle",
+    "narration toggle"
+  ],
+  "stack": "Next.js 15.5.15 + React 19 + TypeScript 5 + Tailwind 4 + ShadCN + Vercel"
+}

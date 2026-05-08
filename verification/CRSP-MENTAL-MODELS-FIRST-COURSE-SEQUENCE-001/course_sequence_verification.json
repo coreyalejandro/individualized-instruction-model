@@ -1,0 +1,21 @@
+{
+  "verification_id": "course_sequence_verification",
+  "contract_id": "CRSP-MENTAL-MODELS-FIRST-COURSE-SEQUENCE-001",
+  "verified_at": "2026-05-08T04:18:23.161678Z",
+  "inv_001_mental_models_first": "PASS",
+  "inv_002_ten_module_sequence": "PASS",
+  "inv_003_five_new_modules": "PASS",
+  "new_modules": [
+    "Task Analysis: The Lesson Plan Beneath Every Prompt",
+    "Bilingual Systems: Human-Legible and Machine-Legible Instruction",
+    "Human-Agent Relationships: Trust, Priority, and Communication",
+    "Contracting vs. Prompting: The Minimal Contract Window",
+    "Culminating Project: Build a Domain-Specific Agent with V&T"
+  ],
+  "module_count": 10,
+  "first_module_title": "Mental Models for Agent Architecture",
+  "sequence_json_sha256": "6d0916129efdc0d72dc06b7a03a2f65d3c54c3e49d2964d3b8012794c9864a96",
+  "halt_019_status": "CLEAR",
+  "halt_020_status": "CLEAR",
+  "halt_021_status": "CLEAR"
+}

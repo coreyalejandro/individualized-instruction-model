@@ -1,0 +1,25 @@
+{
+  "project": "individualized-instruction-model",
+  "product_name": "Jinno",
+  "stack": "Next.js 15.5.15 + React 19 + TypeScript 5 + Tailwind 4 + ShadCN + Vercel",
+  "baseline_commit": "3fca0cae59d4a7769ca442008b5125986464bbd5",
+  "contract_schema_sha256": "a294f2582bd8c539f8868956d1e02e9ecc6373e8e2462e178ecdb1f92eb9dab0",
+  "contracts": [
+    {
+      "contract_id": "CRSP-MENTAL-MODELS-FIRST-COURSE-SEQUENCE-001",
+      "status": "Active",
+      "json_path": "CRSP-MENTAL-MODELS-FIRST-COURSE-SEQUENCE-001.json",
+      "markdown_path": "CRSP-MENTAL-MODELS-FIRST-COURSE-SEQUENCE-001.md",
+      "evidence_dir": "verification/CRSP-MENTAL-MODELS-FIRST-COURSE-SEQUENCE-001"
+    }
+  ],
+  "constitutional_files": [
+    "THE_LIVING_CONSTITUTION.md",
+    "CLAUDE.md",
+    "MASTER_PROJECT_INVENTORY.json",
+    "BUILD_CONTRACT.md",
+    "contract-schema.json",
+    "CRSP_OUTCOME_TEMPLATE.md",
+    "scripts/verify_crsp_template_bundle.sh"
+  ]
+}

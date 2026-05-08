@@ -1,0 +1,531 @@
+{
+  "contract_id": "CRSP-MENTAL-MODELS-FIRST-COURSE-SEQUENCE-001",
+  "schema_version": "4.0",
+  "status": "Active",
+  "basename": "CRSP-MENTAL-MODELS-FIRST-COURSE-SEQUENCE-001",
+  "objective": {
+    "primary": "Convert the existing AI agent course outline into a deterministic instructional sequence where Mental Models for Agent Architecture is Module 1 and the education analogy is extended as the throughline across all modules.",
+    "instructional_goal": "Teach AI agent architecture, prompt engineering, task analysis, machine-legible contracts, human-agent relationship norms, contracting versus prompting, verification, evaluation, and domain-specific agent design through the teacher-student-classroom-homework-report-card analogy.",
+    "course_sequence": [
+      {
+        "module_number": 1,
+        "title": "Mental Models for Agent Architecture",
+        "status": "existing_repositioned_anchor",
+        "function": "Establish the teacher, student, classroom, textbook, homework, and report card analogy as the course grammar."
+      },
+      {
+        "module_number": 2,
+        "title": "Task Analysis: The Lesson Plan Beneath Every Prompt",
+        "status": "new_module",
+        "function": "Teach task analysis as the foundation and substrate of all prompt engineering."
+      },
+      {
+        "module_number": 3,
+        "title": "Bilingual Systems: Human-Legible and Machine-Legible Instruction",
+        "status": "new_module",
+        "function": "Teach when to use human-readable prose, machine-legible schema, and paired bilingual documents."
+      },
+      {
+        "module_number": 4,
+        "title": "Human-Agent Relationships: Trust, Priority, and Communication",
+        "status": "new_module",
+        "function": "Teach that human-agent interaction creates relationship dynamics requiring trust, commitment, clear priorities, mutual respect, and clear communication."
+      },
+      {
+        "module_number": 5,
+        "title": "Contracting vs. Prompting: The Minimal Contract Window",
+        "status": "new_module",
+        "function": "Teach the difference between prompting and contracting, introducing the Verification and Truth statement as a minimal Contract Window."
+      },
+      {
+        "module_number": 6,
+        "title": "The Sequester Contract",
+        "status": "existing_resequenced_module",
+        "function": "Introduce constrained execution and contamination control after learners understand contracts."
+      },
+      {
+        "module_number": 7,
+        "title": "Building Pro-Grade Evaluation Rubrics",
+        "status": "existing_resequenced_module",
+        "function": "Extend V&T from minimal truth reporting into evaluation rubrics."
+      },
+      {
+        "module_number": 8,
+        "title": "Deterministic Evals",
+        "status": "existing_resequenced_module",
+        "function": "Teach repeatable evaluation as stable grading rather than subjective assessment."
+      },
+      {
+        "module_number": 9,
+        "title": "Design, Build, Run",
+        "status": "existing_resequenced_module",
+        "function": "Teach the agent lifecycle as curriculum design, classroom execution, grading, and revision."
+      },
+      {
+        "module_number": 10,
+        "title": "Culminating Project: Build a Domain-Specific Agent with V&T",
+        "status": "new_module",
+        "function": "Require learners to build a domain-specific agent with task analysis, bilingual instruction, contract boundaries, knowledge base, tool plan, evaluation rubric, and V&T statement."
+      }
+    ]
+  },
+  "repo_system": {
+    "name": "v0-individualized-instruction-model",
+    "active_url": "https://v0-individualized-instruction-model.vercel.app/learn/mental-models",
+    "product_name_visible_in_app": "Jinno",
+    "repo_path": "/Users/coreyalejandro/Projects/individualized-instruction-model",
+    "repository_url": "local \u2014 no remote configured",
+    "target_system_type": "instructional learning application",
+    "implementation_stack": "Next.js 15.5.15 + React 19 + TypeScript 5 + Tailwind 4 + ShadCN + Vercel"
+  },
+  "authority_files": {
+    "constitution": "THE_LIVING_CONSTITUTION.md",
+    "claude": "CLAUDE.md",
+    "inventory": "MASTER_PROJECT_INVENTORY.json"
+  },
+  "scope": {
+    "repo_path": "/Users/coreyalejandro/Projects/individualized-instruction-model",
+    "allowed_roots": [
+      "app/learn",
+      "src/app/learn",
+      "components/learn",
+      "src/components/learn",
+      "content",
+      "src/content",
+      "data",
+      "src/data",
+      "lib/course",
+      "src/lib/course",
+      "public",
+      "verification/CRSP-MENTAL-MODELS-FIRST-COURSE-SEQUENCE-001"
+    ],
+    "forbidden_paths": [
+      "THE_LIVING_CONSTITUTION.md",
+      "CLAUDE.md",
+      "MASTER_PROJECT_INVENTORY.json",
+      "contract-schema.json",
+      "CRSP_OUTCOME_TEMPLATE.md",
+      "scripts/verify_crsp_template_bundle.sh",
+      ".env",
+      ".env.local",
+      ".env.production",
+      ".git"
+    ],
+    "network_access": false,
+    "scope_boundary": {
+      "included": [
+        "Reorder the instructional sequence so Mental Models for Agent Architecture is Module 1.",
+        "Create five new module specifications using the existing app voice, tone, instructional style, and educational analogy.",
+        "Preserve existing module concepts for The Sequester Contract, Building Pro-Grade Evaluation Rubrics, Deterministic Evals, and Design, Build, Run.",
+        "Map each module explicitly to the education analogy.",
+        "Define learning objectives, key takeaways, practice prompts, and capstone deliverables.",
+        "Produce paired human-readable and machine-legible course artifacts.",
+        "Produce verification evidence showing course-order integrity, analogy-throughline consistency, required-module coverage, and V&T inclusion."
+      ],
+      "excluded": [
+        "Changing constitutional authority files.",
+        "Changing authentication, payments, deployment configuration, analytics, or unrelated app infrastructure.",
+        "Replacing the product brand, voice, or visual system.",
+        "Removing existing accessibility controls visible in the current learning page.",
+        "Claiming learner efficacy without evaluation data.",
+        "Claiming production deployment without build, test, and deployment evidence."
+      ]
+    }
+  },
+  "topology": {
+    "mode": "Satellite",
+    "profile_type": "ContentBuild",
+    "verifier_class": "DocumentVerifier"
+  },
+  "baseline": {
+    "commit": "3fca0cae59d4a7769ca442008b5125986464bbd5",
+    "dirty_worktree_allowed": false,
+    "baseline_state": {
+      "known_existing_active_page": "https://v0-individualized-instruction-model.vercel.app/learn/mental-models",
+      "known_existing_module_title": "Mental Models for Agent Architecture",
+      "known_existing_voice": "clear, analogy-driven, direct, practitioner-oriented instructional prose",
+      "known_existing_analogy": "teacher, student, textbook, classroom, homework, report card",
+      "known_existing_accessibility_controls": [
+        "font size decrease",
+        "font size increase",
+        "high contrast toggle",
+        "dyslexic-friendly font toggle",
+        "narration toggle"
+      ],
+      "unverified_existing_modules": [
+        "The Sequester Contract",
+        "Building Pro-Grade Evaluation Rubrics",
+        "Deterministic Evals",
+        "Design, Build, Run"
+      ]
+    }
+  },
+  "dependencies": {
+    "runtime_dependencies": [
+      "next@15.5.15",
+      "react@19.2.0",
+      "typescript@5",
+      "tailwindcss@4",
+      "@ai-sdk/react@3",
+      "ai@6",
+      "zod@3.25.76"
+    ],
+    "content_dependencies": [
+      "Existing Mental Models for Agent Architecture module content",
+      "Existing Sequester Contract module content",
+      "Existing Pro-Grade Evaluation Rubrics module content",
+      "Existing Deterministic Evals module content",
+      "Existing Design, Build, Run module content"
+    ],
+    "validation_dependencies": [
+      "Python 3 standard library",
+      "jq",
+      "git",
+      "contract-schema.json",
+      "scripts/verify_crsp_template_bundle.sh"
+    ]
+  },
+  "artifacts": {
+    "json_path": "CRSP-MENTAL-MODELS-FIRST-COURSE-SEQUENCE-001.json",
+    "markdown_path": "CRSP-MENTAL-MODELS-FIRST-COURSE-SEQUENCE-001.md",
+    "evidence_dir": "verification/CRSP-MENTAL-MODELS-FIRST-COURSE-SEQUENCE-001",
+    "generated_paths": [
+      "content/course-sequence/mental-models-first.sequence.json",
+      "content/course-sequence/mental-models-first.sequence.md",
+      "content/modules/01-mental-models-for-agent-architecture.md",
+      "content/modules/02-task-analysis-lesson-plan-beneath-every-prompt.md",
+      "content/modules/03-bilingual-systems-human-legible-machine-legible.md",
+      "content/modules/04-human-agent-relationships-trust-priority-communication.md",
+      "content/modules/05-contracting-vs-prompting-minimal-contract-window.md",
+      "content/modules/10-culminating-project-domain-specific-agent-with-vt.md",
+      "verification/CRSP-MENTAL-MODELS-FIRST-COURSE-SEQUENCE-001/course_sequence_verification.json",
+      "verification/CRSP-MENTAL-MODELS-FIRST-COURSE-SEQUENCE-001/analogy_throughline_verification.json",
+      "verification/CRSP-MENTAL-MODELS-FIRST-COURSE-SEQUENCE-001/vt_presence_verification.json",
+      "verification/CRSP-MENTAL-MODELS-FIRST-COURSE-SEQUENCE-001/content_diff_summary.md"
+    ]
+  },
+  "operations": [
+    {
+      "step_id": "OP-001",
+      "name": "capture_baseline_course_state",
+      "status": "COMPLETE",
+      "outputs": [
+        "verification/CRSP-MENTAL-MODELS-FIRST-COURSE-SEQUENCE-001/baseline_course_inventory.json"
+      ]
+    },
+    {
+      "step_id": "OP-002",
+      "name": "create_course_sequence_manifest",
+      "status": "COMPLETE",
+      "outputs": [
+        "content/course-sequence/mental-models-first.sequence.json"
+      ]
+    },
+    {
+      "step_id": "OP-003",
+      "name": "create_human_readable_sequence_guide",
+      "status": "COMPLETE",
+      "outputs": [
+        "content/course-sequence/mental-models-first.sequence.md"
+      ]
+    },
+    {
+      "step_id": "OP-004",
+      "name": "preserve_and_reposition_mental_models_module",
+      "status": "COMPLETE",
+      "outputs": [
+        "content/modules/01-mental-models-for-agent-architecture.md"
+      ]
+    },
+    {
+      "step_id": "OP-005",
+      "name": "draft_task_analysis_module",
+      "status": "COMPLETE",
+      "outputs": [
+        "content/modules/02-task-analysis-lesson-plan-beneath-every-prompt.md"
+      ]
+    },
+    {
+      "step_id": "OP-006",
+      "name": "draft_bilingual_systems_module",
+      "status": "COMPLETE",
+      "outputs": [
+        "content/modules/03-bilingual-systems-human-legible-machine-legible.md"
+      ]
+    },
+    {
+      "step_id": "OP-007",
+      "name": "draft_human_agent_relationships_module",
+      "status": "COMPLETE",
+      "outputs": [
+        "content/modules/04-human-agent-relationships-trust-priority-communication.md"
+      ]
+    },
+    {
+      "step_id": "OP-008",
+      "name": "draft_contracting_vs_prompting_module",
+      "status": "COMPLETE",
+      "outputs": [
+        "content/modules/05-contracting-vs-prompting-minimal-contract-window.md"
+      ]
+    },
+    {
+      "step_id": "OP-009",
+      "name": "resequencing_existing_advanced_modules",
+      "status": "COMPLETE",
+      "note": "Resequencing encoded in sequence manifest; lib/course-data.ts not modified (integration pass required)",
+      "outputs": [
+        "content/course-sequence/mental-models-first.sequence.json"
+      ]
+    },
+    {
+      "step_id": "OP-010",
+      "name": "draft_capstone_module",
+      "status": "COMPLETE",
+      "outputs": [
+        "content/modules/10-culminating-project-domain-specific-agent-with-vt.md"
+      ]
+    },
+    {
+      "step_id": "OP-011",
+      "name": "verify_instructional_voice_and_analogy_throughline",
+      "status": "COMPLETE",
+      "outputs": [
+        "verification/CRSP-MENTAL-MODELS-FIRST-COURSE-SEQUENCE-001/analogy_throughline_verification.json"
+      ]
+    },
+    {
+      "step_id": "OP-012",
+      "name": "verify_vt_and_contract_window_presence",
+      "status": "COMPLETE",
+      "outputs": [
+        "verification/CRSP-MENTAL-MODELS-FIRST-COURSE-SEQUENCE-001/vt_presence_verification.json"
+      ]
+    },
+    {
+      "step_id": "OP-013",
+      "name": "write_final_content_diff_summary",
+      "status": "COMPLETE",
+      "outputs": [
+        "verification/CRSP-MENTAL-MODELS-FIRST-COURSE-SEQUENCE-001/content_diff_summary.md"
+      ]
+    }
+  ],
+  "invariants": [
+    {
+      "invariant_id": "INV-001",
+      "name": "mental_models_first",
+      "rule": "Mental Models for Agent Architecture must be Module 1.",
+      "status": "PASS"
+    },
+    {
+      "invariant_id": "INV-002",
+      "name": "ten_module_sequence",
+      "rule": "The final course sequence must contain exactly ten modules.",
+      "status": "PASS"
+    },
+    {
+      "invariant_id": "INV-003",
+      "name": "five_new_modules_present",
+      "rule": "The five requested new modules must exist.",
+      "status": "PASS"
+    },
+    {
+      "invariant_id": "INV-004",
+      "name": "education_analogy_throughline",
+      "rule": "Every module must explicitly map its core concept to the education analogy.",
+      "status": "PASS"
+    },
+    {
+      "invariant_id": "INV-005",
+      "name": "existing_voice_preserved",
+      "rule": "New module prose must preserve the existing app voice.",
+      "status": "PASS"
+    },
+    {
+      "invariant_id": "INV-006",
+      "name": "accessibility_controls_not_removed",
+      "rule": "The build must not remove existing learner-facing accessibility controls.",
+      "status": "PASS"
+    },
+    {
+      "invariant_id": "INV-007",
+      "name": "human_machine_legibility_pair",
+      "rule": "The course sequence must include both a human-readable Markdown guide and a machine-legible JSON sequence manifest.",
+      "status": "PASS"
+    },
+    {
+      "invariant_id": "INV-008",
+      "name": "vt_statement_required",
+      "rule": "The contracting module and capstone module must teach and require a Verification and Truth statement.",
+      "status": "PASS"
+    },
+    {
+      "invariant_id": "INV-009",
+      "name": "no_false_deployment_claim",
+      "rule": "The build must not claim deployment, learner testing, or production validation without evidence.",
+      "status": "PASS"
+    },
+    {
+      "invariant_id": "INV-010",
+      "name": "no_markdown_only_enforcement",
+      "rule": "No enforceable obligation may exist only in Markdown without corresponding machine-legible representation.",
+      "status": "PASS"
+    }
+  ],
+  "predicates": [
+    "exists(THE_LIVING_CONSTITUTION.md)",
+    "exists(CLAUDE.md)",
+    "exists(MASTER_PROJECT_INVENTORY.json)",
+    "exists(BUILD_CONTRACT.md)",
+    "exists(contract-schema.json)",
+    "exists(CRSP_OUTCOME_TEMPLATE.md)",
+    "exists(scripts/verify_crsp_template_bundle.sh)",
+    "executable(scripts/verify_crsp_template_bundle.sh) == true"
+  ],
+  "verifier_modules": [
+    {
+      "module_id": "course_sequence_verifier",
+      "path": "verification/CRSP-MENTAL-MODELS-FIRST-COURSE-SEQUENCE-001/course_sequence_verification.json",
+      "sha256": "computed_at_runtime"
+    },
+    {
+      "module_id": "analogy_throughline_verifier",
+      "path": "verification/CRSP-MENTAL-MODELS-FIRST-COURSE-SEQUENCE-001/analogy_throughline_verification.json",
+      "sha256": "computed_at_runtime"
+    },
+    {
+      "module_id": "vt_presence_verifier",
+      "path": "verification/CRSP-MENTAL-MODELS-FIRST-COURSE-SEQUENCE-001/vt_presence_verification.json",
+      "sha256": "computed_at_runtime"
+    }
+  ],
+  "halt_matrix": [
+    {
+      "halt_id": "HALT-001",
+      "condition": "required authority file missing",
+      "action": "halt",
+      "status": "CLEAR"
+    },
+    {
+      "halt_id": "HALT-019",
+      "condition": "Mental Models for Agent Architecture is not Module 1",
+      "action": "halt",
+      "status": "CLEAR"
+    },
+    {
+      "halt_id": "HALT-020",
+      "condition": "final course sequence does not contain exactly ten modules",
+      "action": "halt",
+      "status": "CLEAR"
+    },
+    {
+      "halt_id": "HALT-021",
+      "condition": "any requested new module is missing",
+      "action": "halt",
+      "status": "CLEAR"
+    },
+    {
+      "halt_id": "HALT-022",
+      "condition": "any module lacks explicit education-analogy mapping",
+      "action": "halt",
+      "status": "CLEAR"
+    },
+    {
+      "halt_id": "HALT-023",
+      "condition": "contracting module or capstone module omits V&T statement requirements",
+      "action": "halt",
+      "status": "CLEAR"
+    },
+    {
+      "halt_id": "HALT-024",
+      "condition": "existing accessibility controls are removed",
+      "action": "halt",
+      "status": "CLEAR"
+    },
+    {
+      "halt_id": "HALT-025",
+      "condition": "build claims production deployment, learner validation, or efficacy without evidence",
+      "action": "halt",
+      "status": "CLEAR"
+    }
+  ],
+  "truth_surface": {
+    "primary_truth_surface": "verification/CRSP-MENTAL-MODELS-FIRST-COURSE-SEQUENCE-001/content_diff_summary.md",
+    "machine_truth_surfaces": [
+      "verification/CRSP-MENTAL-MODELS-FIRST-COURSE-SEQUENCE-001/course_sequence_verification.json",
+      "verification/CRSP-MENTAL-MODELS-FIRST-COURSE-SEQUENCE-001/analogy_throughline_verification.json",
+      "verification/CRSP-MENTAL-MODELS-FIRST-COURSE-SEQUENCE-001/vt_presence_verification.json"
+    ],
+    "required_truth_categories": [
+      "exists",
+      "does_not_exist",
+      "unverified",
+      "functional_status"
+    ]
+  },
+  "acceptance_criteria": [
+    "The contract preserves the C-RSP v4.0 core structure.",
+    "The final sequence places Mental Models for Agent Architecture as Module 1.",
+    "The final sequence contains exactly ten modules.",
+    "The five requested new modules are present and named clearly.",
+    "Existing modules are resequenced after the new contracting foundation without being erased from the course arc.",
+    "Every module includes an explicit education-analogy mapping.",
+    "The course sequence includes paired human-readable and machine-legible artifacts.",
+    "The contracting module introduces Verification and Truth statement as a minimal Contract Window.",
+    "The capstone requires a domain-specific agent with V&T statement.",
+    "The build does not remove existing learner-facing accessibility affordances.",
+    "The build produces evidence files for sequence integrity, analogy-throughline coverage, V&T presence, and content changes.",
+    "The build does not claim production deployment or learner efficacy without evidence."
+  ],
+  "lifecycle": {
+    "allowed_states": [
+      "Draft",
+      "Active",
+      "Frozen",
+      "Superseded",
+      "Quarantined"
+    ],
+    "transition_evidence_path": "verification/CRSP-MENTAL-MODELS-FIRST-COURSE-SEQUENCE-001/lifecycle.jsonl",
+    "current_state": "Active",
+    "transitioned_at": "2026-05-08T04:21:12.467481Z"
+  },
+  "rollback": {
+    "safe_state": "baseline commit 3fca0cae59d4a7769ca442008b5125986464bbd5 with no generated course-sequence artifacts applied",
+    "procedure": [
+      "Stop execution immediately when any halt condition is active.",
+      "Record halt reason in verification/CRSP-MENTAL-MODELS-FIRST-COURSE-SEQUENCE-001/halt.jsonl.",
+      "Do not mutate constitutional authority files.",
+      "Do not mutate files outside allowed_roots.",
+      "Restore modified course files to baseline commit.",
+      "Remove generated files listed under artifacts.generated_paths only if rollback is invoked before acceptance.",
+      "Write rollback outcome to verification/CRSP-MENTAL-MODELS-FIRST-COURSE-SEQUENCE-001/rollback.jsonl."
+    ],
+    "evidence_path": "verification/CRSP-MENTAL-MODELS-FIRST-COURSE-SEQUENCE-001/rollback.jsonl"
+  },
+  "not_claimed_boundary": [
+    "This contract does not claim the course has been implemented in the app.",
+    "This contract does not claim the app has been built or deployed.",
+    "This contract does not claim learner outcomes have been tested.",
+    "This contract does not claim accessibility has been audited beyond preservation of existing visible controls.",
+    "This contract does not claim verifier module hashes are frozen (hashes are computed at runtime).",
+    "This contract does not claim a remote repository exists."
+  ],
+  "unresolved_field_ledger": [],
+  "mandatory_enforcement_fields": [
+    "status",
+    "scope.repo_path",
+    "scope.allowed_roots",
+    "topology.mode",
+    "topology.verifier_class",
+    "baseline.commit",
+    "artifacts.json_path",
+    "artifacts.markdown_path",
+    "artifacts.evidence_dir",
+    "operations",
+    "halt_matrix",
+    "rollback.safe_state",
+    "rollback.procedure",
+    "unresolved_field_ledger"
+  ]
+}

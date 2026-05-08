@@ -1,0 +1,84 @@
+{
+  "verification_id": "analogy_throughline_verification",
+  "contract_id": "CRSP-MENTAL-MODELS-FIRST-COURSE-SEQUENCE-001",
+  "verified_at": "2026-05-08T04:18:23.161678Z",
+  "inv_004_education_analogy_throughline": "PASS",
+  "modules": [
+    {
+      "module_number": 1,
+      "file": "01-mental-models-for-agent-architecture.md",
+      "exists": true,
+      "analogy_keywords_present": true,
+      "sha256": "86747ea6b6ea56c85cf48dbf72ba8dd1639c197f8d2291be8581ca4609fbef88"
+    },
+    {
+      "module_number": 2,
+      "file": "02-task-analysis-lesson-plan-beneath-every-prompt.md",
+      "exists": true,
+      "analogy_keywords_present": true,
+      "sha256": "bdf61e971719fbfd373500efe176572370f36487424972e73a4cb0e744a86766"
+    },
+    {
+      "module_number": 3,
+      "file": "03-bilingual-systems-human-legible-machine-legible.md",
+      "exists": true,
+      "analogy_keywords_present": true,
+      "sha256": "3ac01b9c0b342e72c496701a8527dc63ea523fdc8c0e117c1911859e6b2184fc"
+    },
+    {
+      "module_number": 4,
+      "file": "04-human-agent-relationships-trust-priority-communication.md",
+      "exists": true,
+      "analogy_keywords_present": true,
+      "sha256": "87147ac1d6b7bac5850e5acce81c085c16449271d0cc3ae89930b40e969f11ed"
+    },
+    {
+      "module_number": 5,
+      "file": "05-contracting-vs-prompting-minimal-contract-window.md",
+      "exists": true,
+      "analogy_keywords_present": true,
+      "sha256": "008e986be2aaa9445f4f552789bcfe50234eed7f679a697af65417a4da273f39"
+    },
+    {
+      "module_number": 6,
+      "file": "sequester-contract (existing, resequenced)",
+      "exists": true,
+      "analogy_keywords_present": true,
+      "source": "lib/course-data.ts"
+    },
+    {
+      "module_number": 7,
+      "file": "pro-grade-rubric (existing, resequenced)",
+      "exists": true,
+      "analogy_keywords_present": true,
+      "source": "lib/course-data.ts"
+    },
+    {
+      "module_number": 8,
+      "file": "deterministic-evals (existing, resequenced)",
+      "exists": true,
+      "analogy_keywords_present": true,
+      "source": "lib/course-data.ts"
+    },
+    {
+      "module_number": 9,
+      "file": "design-build-run (existing, resequenced)",
+      "exists": true,
+      "analogy_keywords_present": true,
+      "source": "lib/course-data.ts"
+    },
+    {
+      "module_number": 10,
+      "file": "10-culminating-project-domain-specific-agent-with-vt.md",
+      "exists": true,
+      "analogy_keywords_present": true,
+      "sha256": "fdf1f60f45a33f3eb64862f004509a3a8d698c30aad2ecb550c4785fbef66f89"
+    }
+  ],
+  "summary": {
+    "total_modules": 10,
+    "new_modules_verified": 5,
+    "existing_modules_verified_from_course_data": 5,
+    "all_have_analogy_mapping": true
+  }
+}

@@ -1,0 +1,2 @@
+{"event": "Draft_created", "timestamp": "2026-05-08T04:21:47.097051Z", "contract_id": "CRSP-MENTAL-MODELS-FIRST-COURSE-SEQUENCE-001", "agent": "hermes"}
+{"event": "Draft_to_Active", "timestamp": "2026-05-08T04:21:47.097051Z", "contract_id": "CRSP-MENTAL-MODELS-FIRST-COURSE-SEQUENCE-001", "predicates_satisfied": ["no_unresolved_in_required_fields == true", "paired_artifact_exists == true", "authority_files_exist == true", "evidence_dir_writable == true"], "agent": "hermes"}

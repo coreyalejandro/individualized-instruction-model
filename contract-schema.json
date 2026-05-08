@@ -1,0 +1,107 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "C-RSP Contract v4.0",
+  "type": "object",
+  "required": [
+    "contract_id",
+    "schema_version",
+    "status",
+    "basename",
+    "objective",
+    "scope",
+    "topology",
+    "baseline",
+    "dependencies",
+    "artifacts",
+    "operations",
+    "invariants",
+    "predicates",
+    "verifier_modules",
+    "halt_matrix",
+    "truth_surface",
+    "acceptance_criteria",
+    "lifecycle",
+    "rollback",
+    "not_claimed_boundary",
+    "unresolved_field_ledger",
+    "mandatory_enforcement_fields"
+  ],
+  "properties": {
+    "contract_id": {
+      "type": "string"
+    },
+    "schema_version": {
+      "type": "string",
+      "enum": [
+        "4.0"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "Draft",
+        "Active",
+        "Frozen",
+        "Superseded",
+        "Quarantined"
+      ]
+    },
+    "basename": {
+      "type": "string"
+    },
+    "objective": {
+      "type": "object"
+    },
+    "scope": {
+      "type": "object"
+    },
+    "topology": {
+      "type": "object"
+    },
+    "baseline": {
+      "type": "object"
+    },
+    "dependencies": {
+      "type": "object"
+    },
+    "artifacts": {
+      "type": "object"
+    },
+    "operations": {
+      "type": "array"
+    },
+    "invariants": {
+      "type": "array"
+    },
+    "predicates": {
+      "type": "array"
+    },
+    "verifier_modules": {
+      "type": "array"
+    },
+    "halt_matrix": {
+      "type": "array"
+    },
+    "truth_surface": {
+      "type": "object"
+    },
+    "acceptance_criteria": {
+      "type": "array"
+    },
+    "lifecycle": {
+      "type": "object"
+    },
+    "rollback": {
+      "type": "object"
+    },
+    "not_claimed_boundary": {
+      "type": "array"
+    },
+    "unresolved_field_ledger": {
+      "type": "array"
+    },
+    "mandatory_enforcement_fields": {
+      "type": "array"
+    }
+  }
+}

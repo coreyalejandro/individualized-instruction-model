@@ -1,0 +1,37 @@
+{
+  "verification_id": "vt_presence_verification",
+  "contract_id": "CRSP-MENTAL-MODELS-FIRST-COURSE-SEQUENCE-001",
+  "verified_at": "2026-05-08T04:18:23.161678Z",
+  "inv_008_vt_statement_required": "PASS",
+  "checks": [
+    {
+      "module_number": 5,
+      "title": "Contracting vs. Prompting: The Minimal Contract Window",
+      "file": "content/modules/05-contracting-vs-prompting-minimal-contract-window.md",
+      "vt_section_present": true,
+      "vt_four_categories_present": true,
+      "categories_found": [
+        "EXISTS",
+        "DOES NOT EXIST",
+        "UNVERIFIED",
+        "FUNCTIONAL STATUS"
+      ],
+      "teaches_vt_format": true
+    },
+    {
+      "module_number": 10,
+      "title": "Culminating Project: Build a Domain-Specific Agent with V&T",
+      "file": "content/modules/10-culminating-project-domain-specific-agent-with-vt.md",
+      "vt_section_present": true,
+      "vt_four_categories_present": true,
+      "categories_found": [
+        "EXISTS",
+        "DOES NOT EXIST",
+        "UNVERIFIED",
+        "FUNCTIONAL STATUS"
+      ],
+      "requires_learner_vt_statement": true
+    }
+  ],
+  "halt_023_status": "CLEAR"
+}
