@@ -28,7 +28,7 @@ export const modules: Module[] = [
       "The context window is your 'classroom' with finite capacity",
       "Tool calls are 'homework'—work done outside the main conversation"
     ],
-    transcript: `One of the first things people notice when they start working with AI agents is how quickly the vocabulary multiplies. Orchestration. Context windows. Tool augmentation. Retrieval pipelines. Each term points at something real, but without a way to hold them all together, they accumulate rather than clarify. The concepts start to feel more complicated than they actually are.
+    transcript: `One of the first things people notice when they start working with AI agents is how quickly the vocabulary multiplies. Orchestration. Context windows. Tool augmentation. Retrieval pipelines. Each term points at something real, but without a way to connect them, they pile up rather than clarify. The concepts start to feel more complicated than they actually are.
 
 The most useful thing you can do early on is find a mental model—a familiar framework you already understand that the new concepts can attach to. A good mental model doesn't simplify things to the point of being wrong. It gives you somewhere to put new information so it stays organized and connected.
 
@@ -42,7 +42,7 @@ The textbook is your knowledge base—the reference material the agent can draw 
 
 The classroom is your context window. This is one of the most important mappings to internalize. A classroom has a fixed capacity—only so many people fit, only so much can stay on the board at once. Your context window works the same way. It holds a finite amount of information during any given interaction. When you try to fit too much in, things start to fall off. Understanding context as a physical space, with real limits, changes how you think about what to include and what to leave out.
 
-Homework is tool use. When a teacher assigns homework, she's asking students to do work outside of class and bring back what they find. When an agent makes a tool call, it's doing something similar—reaching outside the conversation to retrieve information, run a calculation, or interact with an external system, then returning with the result. The main lesson happens in the classroom; the research happens elsewhere.
+Homework is tool use. When a teacher assigns homework, she's asking students to do work outside of class and bring back what they find. When an agent makes a tool call, it reaches outside the conversation to retrieve information, run a calculation, or interact with an external system, then returns with the result — the same way homework sends students to work elsewhere and bring back what they find.
 
 The report card is your evaluation. It's the honest accounting of how things went. Teachers grade against rubrics—defined criteria applied consistently. Agent evaluations work the same way. A good report card doesn't just say "passing" or "failing." It shows which criteria were met and which weren't, so you know exactly what to address.
 
@@ -77,11 +77,11 @@ Task analysis is that preparation applied to working with agents. It's the pract
 
 The reason this matters is that agents follow what you say, not what you mean. If your instruction skips a step, the agent doesn't fill it in from context the way a person might. It either guesses—sometimes well, often not—or it produces something that answers the literal question while missing the actual point. Task analysis is how you catch those gaps before they become problems.
 
-The process starts with a single clear question: what does "done" actually look like? Not in general terms, but specifically. If someone handed you the finished output, what would you see? What would be true that isn't true right now? Getting this right is harder than it sounds. Vague goals produce vague task analyses, which produce vague prompts, which produce outputs that require another round of work to interpret and revise.
+The process starts with a single clear question: what does "done" actually look like? Not in general terms, but specifically. If someone handed you the finished output, what would you see? What would be true that isn't true right now? Getting this right is harder than it sounds. Vague goals produce vague task analyses, which produce vague prompts, which produce outputs you have to spend another round fixing.
 
 Once you have a clear picture of the end state — the finished product, what done actually looks like — you work backward. What has to happen just before that? What has to happen before that? You're drawing the path from where things are now to where you want them to be, one step at a time.
 
-As you do this, you start to see which steps can only happen after other steps are done — the way a student needs to understand fractions before working with ratios, or decimals before working with percentages. In a prompt, these ordering requirements tell you what information needs to be present before a given instruction makes sense. If the agent needs to evaluate quality, it needs criteria before it starts evaluating. If it needs to summarize a document, it needs the document before it starts summarizing.
+As you do this, you see which steps can only happen after other steps are done. A student needs fractions before ratios, decimals before percentages. In a prompt, this tells you what information needs to be there before a given instruction makes sense. If the agent needs to evaluate quality, it needs criteria before it starts evaluating. If it needs to summarize a document, it needs the document before it starts summarizing.
 
 This might sound like a lot of work before you've written anything. In practice, it saves time. Most prompt revision cycles exist because something in the task structure wasn't thought through before the instruction was written. The agent produced something technically correct but functionally off, because the prompt didn't reflect how the work actually needed to flow. Task analysis is how you get that clarity first.
 
@@ -124,7 +124,7 @@ When you need the agent to consistently apply a rule, the rule needs to be writt
 
 This is also where paired documents become useful. The same content exists in two forms: a human-readable version that explains the intent and context, and a structured version that the agent works from. They're kept in sync deliberately. If you update one, you update the other. The prose version is for understanding. The structured version is for consistency.
 
-The discipline here isn't about writing everything formally. Most communication doesn't need that. It's about recognizing when you're writing something that needs to hold up the same way every time—an evaluation criterion, a scope boundary, a definition that determines behavior—and giving it the form that makes that possible.
+The discipline here isn't about writing everything formally. Most communication doesn't need that. It's about knowing when something needs to hold up the same way every time — an evaluation rule, a scope limit, a definition that controls behavior — and writing it in a form that makes that possible.
 
 When you're not sure which form to use, ask what happens if two people interpret this differently. If consistent interpretation matters, you probably need structure. If nuance and context matter more, prose serves better. Most real documents need some of both.`
   },
@@ -145,11 +145,11 @@ When you're not sure which form to use, ask what happens if two people interpret
       "Priority must be explicit—the agent cannot correctly resolve conflicts without an ordering",
       "Communication failures are the instruction-writer's responsibility to repair first"
     ],
-    transcript: `Working with an agent is a kind of ongoing collaboration. You give instructions, the agent produces something, you adjust, it responds. That back and forth has a shape to it—and like any ongoing collaboration, the shape matters.
+    transcript: `Working with an agent is an ongoing collaboration. You give instructions, the agent produces something, you adjust, it responds. That exchange has a pattern — and like any ongoing collaboration, the pattern matters.
 
-When a collaboration works well, it's usually because both parties have a shared understanding of a few basic things: what the goal is, whose job is whose, how to communicate when something isn't working, and what to do when expectations don't match. Those things don't need to be spelled out every time in a healthy working relationship. They're built into how the two parties interact.
+When a collaboration works well, it's usually because both parties agree on a few basic things: what the goal is, who is responsible for what, how to communicate when something isn't working, and what to do when expectations don't match. In a healthy working relationship, those things don't need restating every time. They're built into how the two parties work together.
 
-With agents, those things do need to be spelled out. Not because the agent is difficult, but because it doesn't arrive with assumptions about how the collaboration should work. It works from what you give it. If what you give it is unclear about the goal, or silent about priorities, or inconsistent from session to session, the agent produces outputs that reflect that. It's not failing—it's working with what it has.
+With agents, those things do need to be stated clearly. Not because the agent is difficult, but because it doesn't arrive with any assumptions about how the work should go. It works from what you give it. If what you give it is unclear about the goal, or silent about priorities, or inconsistent from session to session, the agent produces outputs that reflect that. It's not failing—it's working with what it has.
 
 This is where thinking in terms of a relationship becomes useful. A teacher and a student have a relationship with norms. The teacher shows up prepared and consistent. The student commits to the work. Both know what respect looks like in this context. Neither is guessing at the other's expectations. The relationship runs smoothly because those expectations are clear and stable.
 
@@ -161,7 +161,7 @@ Another place it shows up is in how you handle things when they go wrong. When a
 
 This isn't about being gentle or protective of the agent. It's about being accurate. Most of the time, when an agent produces something unexpected, the cause can be found in the instruction. That's actually good news—instructions are something you can improve.
 
-The relationship frame also clarifies what it means to build something well over time. You're not just issuing prompts and evaluating outputs. You're developing an understanding of how this particular agent responds to different kinds of instructions, where it tends to be strong, where it tends to need more structure. That understanding accumulates. And the more clearly you articulate it—to yourself and in your instructions—the more reliably the collaboration produces what you're looking for.`
+The relationship frame also clarifies what it means to build something well across multiple sessions. You're not just issuing prompts and checking outputs. You're developing an understanding of how this particular agent responds to different kinds of instructions, where it tends to be strong, where it tends to need more guidance. That understanding grows. And the more clearly you put it into words — to yourself and in your instructions — the more reliably the work produces what you're looking for.`
   },
   {
     id: 5,
@@ -182,7 +182,7 @@ The relationship frame also clarifies what it means to build something well over
     ],
     transcript: `There's a difference between asking someone to do something and making an agreement with them about what they'll do.
 
-An ask is informal. You describe what you want, they use their judgment to figure out what you mean, and something comes back. If it's not quite right, you ask again. This works reasonably well between people who share context and trust each other's interpretation. It's how most conversations work.
+An ask is informal. You describe what you want, they use their judgment to figure out what you mean, and something comes back. If it's not quite right, you ask again. This works reasonably well between people who share context and trust each other's read on things. It's how most conversations work.
 
 An agreement is different. It names the outcome explicitly. It says what's included and what isn't. It defines what "done" means before the work starts, not after. And it has a way of verifying that what came back matches what was asked for.
 
@@ -200,7 +200,7 @@ The V&T statement has four parts. What was produced—named specifically, not su
 
 That fourth category is often uncomfortable to write. It's easy to report what worked. It's harder to report what didn't, or to admit that you can't tell whether something actually worked. But that discomfort is useful. The practice of writing an honest V&T statement builds the habit of distinguishing between what you know and what you're assuming—which is one of the most valuable habits you can develop when working with agents.
 
-You don't need to write a full contract for every interaction. Simple tasks are fine as asks. What the contract practice gives you is a framework for the interactions where it matters—where you need a specific outcome, where precision is worth the extra work up front, where you want to be able to verify afterwards whether what came back is actually what you were after.`
+You don't need to write a full contract for every interaction. Simple tasks are fine as asks. What the contract practice gives you is a structure for the interactions where it matters — where you need a specific outcome, where getting it right is worth the extra work at the start, where you want to check afterwards whether what came back is actually what you were after.`
   },
   {
     id: 6,
@@ -397,9 +397,9 @@ Not demonstrate that you understood a concept. Not summarize what a V&T statemen
 
 That's the capstone.
 
-The domain is your choice. Pick something you actually know. The concepts you've learned transfer to any field, but the quality of what you build depends on how well you understand the subject matter. If you know education, build something for educators. If you know healthcare administration, or legal research, or supply chain logistics, build for that. The agent should do something that makes sense in a context you can actually evaluate.
+The domain is your choice. Pick something you actually know. The concepts you've learned transfer to any field, but the quality of what you build depends on how well you understand the subject matter. If you know education, build something for educators. If you know healthcare administration, or legal research, or supply chain logistics, build for that. Pick a domain where you can tell whether the agent's output is actually good.
 
-Before you write any code or any prompt, do the task analysis. Describe the end state you're trying to reach in one concrete sentence. Then work out what steps get you there, in what order, and what each step depends on. This is your lesson plan. Hold onto it—it becomes part of what you submit.
+Before you write any code or any prompt, do the task analysis. Describe the end state you're trying to reach in one concrete sentence. Then work out what steps get you there, in what order, and what each step depends on. This is your lesson plan. Keep it — it becomes part of what you submit.
 
 With the task analysis in hand, write the contract. One sentence for the objective. A clear scope that names what's included and what isn't—the things your agent will do and the things it explicitly won't. Acceptance criteria that are specific enough to check. Stop conditions that would tell you something has gone wrong. And a placeholder for the V&T statement, which you'll fill in last.
 
